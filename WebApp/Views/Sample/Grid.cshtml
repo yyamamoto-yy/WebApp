@@ -1,0 +1,33 @@
+﻿@model WebApp.Models.SampleModel
+
+<div id="grid">
+
+    
+    <form method="POST"
+        asp-action="GetGrid"
+        asp-controller="Sample"
+        data-ajax="true"
+        data-ajax-mode="replace"
+        data-ajax-update="#grid">
+
+        @Html.HiddenFor(model => Model.Text)
+
+        <div class="alert alert-success">
+            テキスト: @Model.Text
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="POST" />
+
+    </form>
+
+    <hr />
+
+    <a href='@Url.Action("GetGrid", "Sample", Model)'
+       class="btn btn-primary"
+       data-ajax="true"
+       data-ajax-mode="replece"
+       data-ajax-update="#grid">
+       GET
+    </a>
+
+</div>
