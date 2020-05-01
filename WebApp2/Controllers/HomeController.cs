@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WebApp.Models;
+using WebApp2.Models;
 
-namespace WebApp.Controllers
+namespace WebApp2.Controllers
 {
     public class HomeController : Controller
     {
@@ -20,7 +20,7 @@ namespace WebApp.Controllers
 
         public IActionResult Index()
         {
-            var model = new WebApp.Models.SampleModel();
+            var model = new WebApp2.Models.SampleModel();
             model.Text = "Hello, World!";
             return View(model);
         }
