@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp2", "WebApp2\WebApp2.csproj", "{4362BA85-F09A-4DF8-B5AA-DF4D48E74C59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp3", "WebApp3\WebApp3.csproj", "{BB841AFD-59AC-44DF-B4B7-0543F5BF7566}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4362BA85-F09A-4DF8-B5AA-DF4D48E74C59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4362BA85-F09A-4DF8-B5AA-DF4D48E74C59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4362BA85-F09A-4DF8-B5AA-DF4D48E74C59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB841AFD-59AC-44DF-B4B7-0543F5BF7566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB841AFD-59AC-44DF-B4B7-0543F5BF7566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB841AFD-59AC-44DF-B4B7-0543F5BF7566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB841AFD-59AC-44DF-B4B7-0543F5BF7566}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
