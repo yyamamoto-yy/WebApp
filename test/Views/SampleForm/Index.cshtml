@@ -1,0 +1,108 @@
+﻿@model test.Models.SampleFormModel
+<style>
+    .inline-item {
+        display: inline;
+        margin-right: 10px;
+    }
+
+    .grid {
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        padding: 5px;
+        background-color: #EEEEEE;
+    }
+
+    .grid-head {
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        padding: 5px;
+        background-color: #EEEEEE;
+    }
+
+    .grid-right {
+        border-right: 1px solid black;
+        background-color: #ffffe0;
+    }
+
+    .submit-area {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+</style>
+
+
+<div class="container-fluid">
+    <form method="post" asp-controller="SampleForm" asp-action="Submit" 
+          data-ajax="true" data-ajax-mode="replace" data-ajax-update="#grid">
+        <div class="row">
+            <div class="page-title">物件検索画面</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 grid-head">
+                <label>不動産番号</label>
+            </div>
+            <div class="col-sm-6 grid-head grid-right">
+                <input class="form-control" type="text" asp-for="@Model.不動産番号">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2 grid">
+                <label>所在</label>
+            </div>
+            <div class="col-sm-6 grid grid-right">
+                <input class="form-control" type="text" asp-for="@Model.所在">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2 grid">
+                <label>物件種別</label>
+            </div>
+            <div class="col-sm-6 grid grid-right">
+                <div class="custom-check inline-item">
+                    <input type="checkbox" id="customCheck" asp-for="@Model.物件種別_土地" />
+                    <label for="customCheck" style="font-size: 1em;">土地</label>
+                </div>
+                <div class="custom-check inline-item">
+                    <input type="checkbox" id="customCheck" asp-for="@Model.物件種別_建物" />
+                    <label for="customCheck" style="font-size: 1em;">建物</label>
+                </div>
+                <div class="custom-check inline-item">
+                    <input type="checkbox" id="customCheck" asp-for="@Model.物件種別_専有" />
+                    <label for="customCheck" style="font-size: 1em;">専有</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2 grid">
+                <label>所有権名義人氏名</label>
+            </div>
+            <div class="col-sm-6 grid grid-right">
+                <div class="custom-check">
+                    <input type="checkbox" id="customCheck" asp-for="@Model.所有権名義人単位で検索する" />
+                    <label for="customCheck" style="font-size: 1em;">所有権名義人単位で検索する</label>
+                </div>
+                <input class="form-control" type="text" asp-for="@Model.所有権名義人氏名">
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2 submit-area">
+                <button type="submit" class="btn btn-primary" style="width:100% ; height: 50px;">検索</button>
+            </div>
+            <div class="col-sm-6">
+            </div>
+        </div>
+
+    </form>
+
+    @await Html.PartialAsync("/Views/SampleForm/Grid.cshtml", Model)   
+   
+</div>
+

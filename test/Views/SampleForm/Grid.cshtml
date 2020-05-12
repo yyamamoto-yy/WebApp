@@ -1,0 +1,89 @@
+﻿@model test.Models.SampleFormModel
+
+
+<div class="annotation-block" style="width:1200px; padding:10px;" id="grid">
+        
+        <div class="header">
+            <div class="annotation-block" style="display:inline-block;">
+                <span class="title">検索結果（@await Component.InvokeAsync("Sample", Model)
+                                    件のデータが見つかりました）</span>
+                            </div>
+        </div>
+        
+
+       
+        
+                <div class="annotation-block" style="display:inline-block;">
+                    @await Component.InvokeAsync("Pagenation")
+                </div>
+
+        <div class="annotation-block" style="padding:10px;">
+            <table class="table-bordered">
+                <tr>
+                    <th rowspan="2" width="320">不動産番号</th>
+                    <th rowspan="2" width="400">所在</th>
+                    <th rowspan="2" width="100">物件種別</th>
+                    <th colspan="3">所有権名義人</th>
+                    <th rowspan="2" width="60"></th>
+                </tr>
+                <tr>
+                    <th width="200">持分</th>
+                    <th width="200">氏名</th>
+                    <th width="300">生年月日</th>
+                </tr>
+                <tr>
+                    <td>０００００００００００００</td>
+                    <td>大阪府大阪市淀川区</td>
+                    <td>土地</td>
+                    <td>４分の１</td>
+                    <td>ウイット太郎</td>
+                    <td>令和９９年９９月９９日</td>
+                    <td>
+                        <div class="annotation-block" style="display:inline-block;">
+                            <a href="#">表示</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>０００００００００００００</td>
+                    <td>大阪府大阪市淀川区</td>
+                    <td>土地</td>
+                    <td>４分の１</td>
+                    <td>ウイット二郎</td>
+                    <td>令和９９年９９月９９日</td>
+                    <td><a href="#">表示</a></td>
+                </tr>
+                <tr>
+                    <td>０００００００００００００</td>
+                    <td>大阪府大阪市淀川区</td>
+                    <td>土地</td>
+                    <td>４分の１</td>
+                    <td>ウイット三郎</td>
+                    <td>令和９９年９９月９９日</td>
+                    <td><a href="#">表示</a></td>
+                </tr>
+                <tr>
+                    <td>０００００００００００００</td>
+                    <td>大阪府大阪市淀川区</td>
+                    <td>土地</td>
+                    <td>４分の１</td>
+                    <td>ウイット花子</td>
+                    <td>令和９９年９９月９９日</td>
+                    <td><a href="#">表示</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="annotation-block" style="display:inline-block;">
+            <nav style="margin-top:10px;margin-bottom:10px;">
+                <ul class="pagination">
+                    <li class="page-item"><span class="page-link">前</span></li>
+                    <li class="page-item active"><span class="page-link">1</span></li>
+                    <li class="page-item"><span class="page-link">2</span></li>
+                    <li class="page-item"><span class="page-link">3</span></li>
+                    <li class="page-item"><span class="page-link">次</span></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
